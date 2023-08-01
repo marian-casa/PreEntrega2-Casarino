@@ -39,3 +39,11 @@ function showTask() {
     listContainer.innerHTML = localStorage.getItem('data');
 }
 showTask();
+
+// Añadir una tarea al presionar Enter
+inputBox.addEventListener('keypress', function(event){
+    if(event.key === 'Enter'){
+        event.preventDefault();
+        addTask().click();
+    }
+})
